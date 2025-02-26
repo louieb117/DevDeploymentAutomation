@@ -1,0 +1,803 @@
+2025-02-22 16:09:21,248 p=110383 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:09:21,248 p=110383 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:09:21,365 p=110383 u=lbellov n=ansible ERROR| ERROR! the role 'common' was not found in /var/home/lbellov/Development/DevDeploymentAutomation/Ansible/playbooks/roles:/var/home/lbellov/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/var/home/lbellov/Development/DevDeploymentAutomation/Ansible/playbooks
+
+The error appears to be in '/var/home/lbellov/Development/DevDeploymentAutomation/Ansible/playbooks/site.yaml': line 4, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - common
+      ^ here
+
+2025-02-22 16:11:23,656 p=111127 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:11:23,656 p=111127 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:11:23,773 p=111127 u=lbellov n=ansible ERROR| ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context. mapping values are not allowed in this context
+  in "<unicode string>", line 2, column 10
+
+The error appears to be in '/var/home/lbellov/Development/DevDeploymentAutomation/Ansible/roles/common/tasks/main.yaml': line 2, column 10, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Update system packages
+      apt:
+         ^ here
+
+2025-02-22 16:11:58,904 p=111417 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:11:58,904 p=111417 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:11:59,053 p=111417 u=lbellov n=ansible ERROR| ERROR! 'hosts' is not a valid attribute for a PlaybookInclude
+
+The error appears to be in '/var/home/lbellov/Development/DevDeploymentAutomation/Ansible/playbooks/site.yaml': line 21, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Congifure logging
+  ^ here
+
+2025-02-22 16:15:30,278 p=112581 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:15:30,278 p=112581 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:15:30,429 p=112581 u=lbellov n=ansible ERROR| ERROR! 'hosts' is not a valid attribute for a PlaybookInclude
+
+The error appears to be in '/var/home/lbellov/Development/DevDeploymentAutomation/Ansible/playbooks/site.yaml': line 21, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Configure logging
+  ^ here
+
+2025-02-22 16:17:17,116 p=113353 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:17:17,116 p=113353 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:17:17,277 p=113353 u=lbellov n=ansible INFO| PLAY [Apply common configuration] **********************************************************************************************************************
+2025-02-22 16:17:17,283 p=113353 u=lbellov n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************
+2025-02-22 16:17:17,881 p=113353 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"msg": "Missing sudo password"}
+2025-02-22 16:17:17,882 p=113353 u=lbellov n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************
+2025-02-22 16:17:17,882 p=113353 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:18:13,506 p=113762 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:18:13,507 p=113762 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:18:13,671 p=113762 u=lbellov n=ansible INFO| PLAY [Apply common configuration] **********************************************************************************************************************
+2025-02-22 16:18:13,677 p=113762 u=lbellov n=ansible INFO| TASK [Gathering Facts] *********************************************************************************************************************************
+2025-02-22 16:18:13,966 p=113762 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.setup": {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3.11"}, "failed": true, "module_stderr": "debian is not in the sudoers file.\n", "module_stdout": "", "msg": "MODULE FAILURE: No start of json char found\nSee stdout/stderr for the exact error", "rc": 1, "warnings": ["Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information."]}}, "msg": "The following modules failed to execute: ansible.legacy.setup\n"}
+2025-02-22 16:18:13,967 p=113762 u=lbellov n=ansible INFO| PLAY RECAP *********************************************************************************************************************************************
+2025-02-22 16:18:13,967 p=113762 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:20:51,039 p=114853 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:20:51,039 p=114853 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:20:51,197 p=114853 u=lbellov n=ansible INFO| PLAY [Apply common configuration] **************************************************************************************************************************
+2025-02-22 16:20:51,204 p=114853 u=lbellov n=ansible INFO| TASK [Gathering Facts] *************************************************************************************************************************************
+2025-02-22 16:20:55,426 p=114853 u=lbellov n=ansible INFO| fatal: [backend]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2025-02-22 16:20:55,426 p=114853 u=lbellov n=ansible INFO| PLAY RECAP *************************************************************************************************************************************************
+2025-02-22 16:20:55,426 p=114853 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:22:24,285 p=115501 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:22:24,285 p=115501 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:22:24,444 p=115501 u=lbellov n=ansible INFO| PLAY [Apply common configuration] **************************************************************************************************************************
+2025-02-22 16:22:24,451 p=115501 u=lbellov n=ansible INFO| TASK [Gathering Facts] *************************************************************************************************************************************
+2025-02-22 16:22:26,710 p=115501 u=lbellov n=ansible INFO| fatal: [backend]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2025-02-22 16:22:26,711 p=115501 u=lbellov n=ansible INFO| PLAY RECAP *************************************************************************************************************************************************
+2025-02-22 16:22:26,711 p=115501 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:28:52,586 p=117839 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:28:52,586 p=117839 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:28:52,745 p=117839 u=lbellov n=ansible INFO| PLAY [Apply common configuration] **************************************************************************************************************************
+2025-02-22 16:28:52,752 p=117839 u=lbellov n=ansible INFO| TASK [Gathering Facts] *************************************************************************************************************************************
+2025-02-22 16:28:53,855 p=117839 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more
+information.
+
+2025-02-22 16:28:53,855 p=117839 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:28:53,858 p=117839 u=lbellov n=ansible INFO| TASK [common : Update system packages] *********************************************************************************************************************
+2025-02-22 16:29:00,217 p=117839 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 16:29:00,221 p=117839 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *******************************************************************************************************
+2025-02-22 16:29:00,820 p=117839 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:29:03,322 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item=curl)
+2025-02-22 16:29:07,644 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item=git)
+2025-02-22 16:29:33,974 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item=podman)
+2025-02-22 16:29:35,975 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item=podman-compose)
+2025-02-22 16:29:37,912 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item=htop)
+2025-02-22 16:30:26,446 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item=glances)
+2025-02-22 16:30:28,507 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item=net-tools)
+2025-02-22 16:30:28,515 p=117839 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *********************************************************************************************************************
+2025-02-22 16:30:28,884 p=117839 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 16:30:28,892 p=117839 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] **********************************************************************************************************
+2025-02-22 16:30:29,448 p=117839 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 16:30:29,453 p=117839 u=lbellov n=ansible INFO| PLAY [Manage users] ****************************************************************************************************************************************
+2025-02-22 16:30:29,457 p=117839 u=lbellov n=ansible INFO| TASK [Gathering Facts] *************************************************************************************************************************************
+2025-02-22 16:30:30,045 p=117839 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:30:30,049 p=117839 u=lbellov n=ansible INFO| TASK [user_management : Create users] **********************************************************************************************************************
+2025-02-22 16:30:30,402 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:30:30,407 p=117839 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] *****************************************************************************************************
+2025-02-22 16:30:30,737 p=117839 u=lbellov n=ansible INFO| changed: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:30:30,743 p=117839 u=lbellov n=ansible INFO| PLAY [Deploy application] **********************************************************************************************************************************
+2025-02-22 16:30:30,747 p=117839 u=lbellov n=ansible INFO| TASK [Gathering Facts] *************************************************************************************************************************************
+2025-02-22 16:30:31,332 p=117839 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:30:31,336 p=117839 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ********************************************************************************************************************
+2025-02-22 16:30:32,182 p=117839 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Warning: Identity file /root/.ssh/id_rsa_deploykey not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Warning: Identity file /root/.ssh/id_rsa_deploykey not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Warning: Identity file /root/.ssh/id_rsa_deploykey not accessible: No such file or directory.", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 16:30:32,183 p=117839 u=lbellov n=ansible INFO| PLAY RECAP *************************************************************************************************************************************************
+2025-02-22 16:30:32,183 p=117839 u=lbellov n=ansible INFO| backend                    : ok=9    changed=6    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:40:52,331 p=122223 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:40:52,331 p=122223 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:40:52,495 p=122223 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:40:52,502 p=122223 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:40:55,381 p=122223 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"msg": "Incorrect sudo password"}
+2025-02-22 16:40:55,382 p=122223 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:40:55,382 p=122223 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:41:07,290 p=122403 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:41:07,290 p=122403 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:41:07,450 p=122403 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:41:07,457 p=122403 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:41:08,293 p=122403 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:41:08,293 p=122403 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:41:08,297 p=122403 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:41:10,070 p=122403 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:41:10,074 p=122403 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:41:10,682 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:41:11,267 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:41:11,853 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:41:12,437 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:41:13,031 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:41:13,626 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:41:14,213 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:41:14,814 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:41:14,818 p=122403 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:41:15,152 p=122403 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:41:15,156 p=122403 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:41:15,724 p=122403 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 16:41:15,727 p=122403 u=lbellov n=ansible INFO| TASK [common : Copy over private keys] *******************************************************************************************************************************************************************
+2025-02-22 16:41:16,126 p=122403 u=lbellov n=ansible INFO| changed: [backend] => (item={'src': '~/.ssh/id_rsa_deploykey', 'dest': '/home/devuser/.ssh/id_rsa_deploykey', 'user': 'devuser'})
+2025-02-22 16:41:16,132 p=122403 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:41:16,136 p=122403 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:41:16,719 p=122403 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:41:16,723 p=122403 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:41:17,057 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:41:17,062 p=122403 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:41:17,396 p=122403 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:41:17,402 p=122403 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:41:17,406 p=122403 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:41:17,985 p=122403 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:41:17,988 p=122403 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 16:41:18,758 p=122403 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Warning: Identity file /root/.ssh/id_rsa_deploykey not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Warning: Identity file /root/.ssh/id_rsa_deploykey not accessible: No such file or directory.\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Warning: Identity file /root/.ssh/id_rsa_deploykey not accessible: No such file or directory.", "Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 16:41:18,759 p=122403 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:41:18,759 p=122403 u=lbellov n=ansible INFO| backend                    : ok=10   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:42:15,518 p=123014 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:42:15,518 p=123014 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:42:15,681 p=123014 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:42:15,688 p=123014 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:42:16,503 p=123014 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:42:16,503 p=123014 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:42:16,506 p=123014 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:42:19,247 p=123014 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:42:19,251 p=123014 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:42:19,860 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:42:20,450 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:42:21,052 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:42:21,638 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:42:22,229 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:42:22,815 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:42:23,406 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:42:23,991 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:42:23,995 p=123014 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:42:24,330 p=123014 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:42:24,336 p=123014 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:42:24,870 p=123014 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:42:24,874 p=123014 u=lbellov n=ansible INFO| TASK [common : Copy over private keys] *******************************************************************************************************************************************************************
+2025-02-22 16:42:25,344 p=123014 u=lbellov n=ansible INFO| changed: [backend] => (item={'src': '~/.ssh/id_rsa_deploykey', 'dest': '/root/.ssh/id_rsa_deploykey', 'user': 'root'})
+2025-02-22 16:42:25,351 p=123014 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:42:25,355 p=123014 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:42:25,938 p=123014 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:42:25,941 p=123014 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:42:26,277 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:42:26,282 p=123014 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:42:26,619 p=123014 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:42:26,625 p=123014 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:42:26,630 p=123014 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:42:27,208 p=123014 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:42:27,212 p=123014 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 16:42:27,988 p=123014 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 16:42:27,989 p=123014 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:42:27,989 p=123014 u=lbellov n=ansible INFO| backend                    : ok=10   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:46:54,876 p=124732 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:46:54,876 p=124732 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:46:55,039 p=124732 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:46:55,046 p=124732 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:46:56,162 p=124732 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:46:56,162 p=124732 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:46:56,166 p=124732 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:46:58,549 p=124732 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:46:58,553 p=124732 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:46:59,152 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:46:59,742 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:47:00,326 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:47:00,921 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:47:01,508 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:47:02,093 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:47:02,693 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:47:03,277 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:47:03,282 p=124732 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:47:03,624 p=124732 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:47:03,628 p=124732 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:47:04,159 p=124732 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:47:04,163 p=124732 u=lbellov n=ansible INFO| TASK [common : Copy over private keys] *******************************************************************************************************************************************************************
+2025-02-22 16:47:04,558 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item={'src': '~/.ssh/id_rsa_deploykey', 'dest': '/root/.ssh/id_rsa_deploykey', 'user': 'root'})
+2025-02-22 16:47:04,565 p=124732 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:47:04,569 p=124732 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:47:05,151 p=124732 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:47:05,155 p=124732 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:47:05,490 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:47:05,495 p=124732 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:47:05,829 p=124732 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:47:05,835 p=124732 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:47:05,839 p=124732 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:47:06,417 p=124732 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:47:06,421 p=124732 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 16:47:06,596 p=124732 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:47:06,600 p=124732 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 16:47:07,165 p=124732 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": true, "cmd": ["ssh-keygen", "-t", "rsa", "-b", "2048", "-f", "~/.ssh/id_rsa_deploykey", "-N", ""], "delta": "0:00:00.314052", "end": "2025-02-23 00:47:07.152857", "msg": "non-zero return code", "rc": 1, "start": "2025-02-23 00:47:06.838805", "stderr": "", "stderr_lines": [], "stdout": "Generating public/private rsa key pair.\n/root/.ssh/id_rsa_deploykey already exists.\nOverwrite (y/n)? ", "stdout_lines": ["Generating public/private rsa key pair.", "/root/.ssh/id_rsa_deploykey already exists.", "Overwrite (y/n)? "]}
+2025-02-22 16:47:07,166 p=124732 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:47:07,166 p=124732 u=lbellov n=ansible INFO| backend                    : ok=11   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:48:11,701 p=125386 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:48:11,701 p=125386 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:48:11,861 p=125386 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:48:11,867 p=125386 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:48:12,900 p=125386 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:48:12,900 p=125386 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:12,904 p=125386 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:48:14,619 p=125386 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:14,623 p=125386 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:48:15,225 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:48:15,813 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:48:16,411 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:48:16,996 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:48:17,600 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:48:18,194 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:48:18,802 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:48:19,396 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:48:19,402 p=125386 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:48:19,735 p=125386 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:19,739 p=125386 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:48:20,274 p=125386 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:20,279 p=125386 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:48:20,283 p=125386 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:48:20,869 p=125386 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:20,873 p=125386 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:48:21,190 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:48:21,195 p=125386 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:48:21,529 p=125386 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:48:21,535 p=125386 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:48:21,539 p=125386 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:48:22,118 p=125386 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:22,121 p=125386 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 16:48:22,298 p=125386 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:22,302 p=125386 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 16:48:22,764 p=125386 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": true, "cmd": ["ssh-keygen", "-t", "rsa", "-b", "2048", "-f", "~/.ssh/id_rsa_deploykey", "-N", ""], "delta": "0:00:00.203125", "end": "2025-02-23 00:48:22.749678", "msg": "non-zero return code", "rc": 1, "start": "2025-02-23 00:48:22.546553", "stderr": "", "stderr_lines": [], "stdout": "Generating public/private rsa key pair.\n/root/.ssh/id_rsa_deploykey already exists.\nOverwrite (y/n)? ", "stdout_lines": ["Generating public/private rsa key pair.", "/root/.ssh/id_rsa_deploykey already exists.", "Overwrite (y/n)? "]}
+2025-02-22 16:48:22,765 p=125386 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:48:22,765 p=125386 u=lbellov n=ansible INFO| backend                    : ok=10   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:48:58,556 p=125859 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:48:58,557 p=125859 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:48:58,716 p=125859 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:48:58,723 p=125859 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:48:59,535 p=125859 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:48:59,535 p=125859 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:48:59,539 p=125859 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:49:01,906 p=125859 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:49:01,910 p=125859 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:49:02,533 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:49:03,118 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:49:03,732 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:49:04,329 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:49:04,911 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:49:05,496 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:49:06,081 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:49:06,665 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:49:06,670 p=125859 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:49:07,003 p=125859 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:49:07,007 p=125859 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:49:07,541 p=125859 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:49:07,546 p=125859 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:49:07,552 p=125859 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:49:08,137 p=125859 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:49:08,141 p=125859 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:49:08,459 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:49:08,465 p=125859 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:49:08,806 p=125859 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:49:08,813 p=125859 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:49:08,817 p=125859 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:49:09,393 p=125859 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:49:09,396 p=125859 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 16:49:09,573 p=125859 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:49:09,577 p=125859 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 16:49:09,957 p=125859 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 16:49:09,961 p=125859 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 16:49:11,267 p=125859 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 16:49:11,267 p=125859 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:49:11,268 p=125859 u=lbellov n=ansible INFO| backend                    : ok=11   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:50:22,258 p=126554 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:50:22,259 p=126554 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:50:22,420 p=126554 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:50:22,428 p=126554 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:50:23,569 p=126554 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:50:23,569 p=126554 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:50:23,572 p=126554 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:50:26,593 p=126554 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:50:26,597 p=126554 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:50:27,219 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:50:27,801 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:50:28,384 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:50:28,989 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:50:29,591 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:50:30,181 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:50:30,766 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:50:31,349 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:50:31,354 p=126554 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:50:31,684 p=126554 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:50:31,689 p=126554 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:50:32,217 p=126554 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:50:32,221 p=126554 u=lbellov n=ansible INFO| TASK [common : Copy over private keys] *******************************************************************************************************************************************************************
+2025-02-22 16:50:32,696 p=126554 u=lbellov n=ansible INFO| changed: [backend] => (item={'src': '~/.ssh/id_rsa_deploykey', 'dest': '/root/.ssh/id_rsa_deploykey', 'user': 'root'})
+2025-02-22 16:50:32,702 p=126554 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:50:32,706 p=126554 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:50:33,292 p=126554 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:50:33,296 p=126554 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:50:33,634 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:50:33,639 p=126554 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:50:33,975 p=126554 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:50:33,981 p=126554 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:50:33,985 p=126554 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:50:34,564 p=126554 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:50:34,568 p=126554 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 16:50:35,321 p=126554 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 16:50:35,322 p=126554 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:50:35,322 p=126554 u=lbellov n=ansible INFO| backend                    : ok=10   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:56:14,249 p=129061 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:56:14,249 p=129061 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:56:14,408 p=129061 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:56:14,415 p=129061 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:56:15,541 p=129061 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:56:15,541 p=129061 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:56:15,546 p=129061 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:56:17,236 p=129061 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:56:17,240 p=129061 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:56:17,844 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:56:18,439 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:56:19,038 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:56:19,653 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:56:20,250 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:56:20,837 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:56:21,441 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:56:22,045 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:56:22,050 p=129061 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:56:22,376 p=129061 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:56:22,380 p=129061 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:56:22,930 p=129061 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:56:22,934 p=129061 u=lbellov n=ansible INFO| TASK [common : Copy over private keys] *******************************************************************************************************************************************************************
+2025-02-22 16:56:23,333 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item={'src': '~/.ssh/id_rsa_deploykey', 'dest': '/root/.ssh/id_rsa_deploykey', 'user': 'root'})
+2025-02-22 16:56:23,340 p=129061 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:56:23,343 p=129061 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:56:23,919 p=129061 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:56:23,923 p=129061 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:56:24,257 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:56:24,262 p=129061 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:56:24,599 p=129061 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:56:24,606 p=129061 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:56:24,610 p=129061 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:56:25,187 p=129061 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:56:25,190 p=129061 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 16:56:25,970 p=129061 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 16:56:25,970 p=129061 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:56:25,971 p=129061 u=lbellov n=ansible INFO| backend                    : ok=10   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 16:58:07,289 p=129896 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 16:58:07,289 p=129896 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 16:58:07,449 p=129896 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 16:58:07,456 p=129896 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:58:08,568 p=129896 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 16:58:08,568 p=129896 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:58:08,572 p=129896 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 16:58:10,206 p=129896 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:58:10,210 p=129896 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 16:58:10,853 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 16:58:11,448 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 16:58:12,034 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 16:58:12,620 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 16:58:13,218 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 16:58:13,814 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 16:58:14,399 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 16:58:15,000 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 16:58:15,005 p=129896 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 16:58:15,339 p=129896 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:58:15,344 p=129896 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 16:58:15,885 p=129896 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:58:15,889 p=129896 u=lbellov n=ansible INFO| TASK [common : Copy over private keys] *******************************************************************************************************************************************************************
+2025-02-22 16:58:16,279 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item={'src': '~/.ssh/id_rsa_deploykey', 'dest': '/root/.ssh/id_rsa_deploykey', 'user': 'root'})
+2025-02-22 16:58:16,285 p=129896 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 16:58:16,289 p=129896 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:58:16,882 p=129896 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:58:16,886 p=129896 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 16:58:17,219 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 16:58:17,224 p=129896 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 16:58:17,558 p=129896 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 16:58:17,564 p=129896 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 16:58:17,570 p=129896 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 16:58:18,146 p=129896 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 16:58:18,149 p=129896 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 16:58:20,535 p=129896 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 16:58:20,535 p=129896 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 16:58:20,536 p=129896 u=lbellov n=ansible INFO| backend                    : ok=10   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 17:06:16,500 p=133519 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:06:16,501 p=133519 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:06:16,663 p=133519 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:06:16,669 p=133519 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:06:18,422 p=133519 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"msg": "Incorrect sudo password"}
+2025-02-22 17:06:18,423 p=133519 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:06:18,423 p=133519 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 17:06:25,006 p=133646 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:06:25,007 p=133646 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:06:25,167 p=133646 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:06:25,174 p=133646 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:06:27,078 p=133646 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"msg": "Incorrect sudo password"}
+2025-02-22 17:06:27,078 p=133646 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:06:27,078 p=133646 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 17:06:33,608 p=133779 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:06:33,608 p=133779 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:06:33,770 p=133779 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:06:33,777 p=133779 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:06:34,588 p=133779 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 17:06:34,588 p=133779 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:06:34,592 p=133779 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 17:06:37,283 p=133779 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:06:37,286 p=133779 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 17:06:37,882 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 17:06:38,469 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 17:06:39,079 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 17:06:39,681 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 17:06:40,270 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 17:06:40,859 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 17:06:41,453 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 17:06:42,057 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 17:06:42,062 p=133779 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 17:06:42,407 p=133779 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:06:42,412 p=133779 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 17:06:42,945 p=133779 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:06:42,949 p=133779 u=lbellov n=ansible INFO| TASK [common : Copy over private keys] *******************************************************************************************************************************************************************
+2025-02-22 17:06:43,421 p=133779 u=lbellov n=ansible INFO| changed: [backend] => (item={'src': '~/.ssh/id_rsa_deploykey', 'dest': '/root/.ssh/id_rsa_deploykey', 'user': 'root'})
+2025-02-22 17:06:43,428 p=133779 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 17:06:43,433 p=133779 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:06:44,011 p=133779 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:06:44,015 p=133779 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 17:06:44,375 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 17:06:44,380 p=133779 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 17:06:44,719 p=133779 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 17:06:44,725 p=133779 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 17:06:44,731 p=133779 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:06:45,315 p=133779 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:06:45,319 p=133779 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 17:06:45,501 p=133779 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:06:45,505 p=133779 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 17:06:45,856 p=133779 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": true, "cmd": ["ssh-keygen", "-t", "rsa", "-b", "2048", "-f", "~/.ssh/id_rsa_deploykey", "-N", ""], "delta": "0:00:00.092480", "end": "2025-02-23 01:06:45.840550", "msg": "non-zero return code", "rc": 1, "start": "2025-02-23 01:06:45.748070", "stderr": "", "stderr_lines": [], "stdout": "Generating public/private rsa key pair.\n/root/.ssh/id_rsa_deploykey already exists.\nOverwrite (y/n)? ", "stdout_lines": ["Generating public/private rsa key pair.", "/root/.ssh/id_rsa_deploykey already exists.", "Overwrite (y/n)? "]}
+2025-02-22 17:06:45,857 p=133779 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:06:45,857 p=133779 u=lbellov n=ansible INFO| backend                    : ok=11   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 17:08:33,642 p=134979 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:08:33,642 p=134979 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:08:33,804 p=134979 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:08:33,810 p=134979 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:08:34,831 p=134979 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 17:08:34,831 p=134979 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:08:34,834 p=134979 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 17:08:36,630 p=134979 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:08:36,633 p=134979 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 17:08:37,235 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 17:08:37,825 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 17:08:38,411 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 17:08:39,010 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 17:08:39,626 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 17:08:40,213 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 17:08:40,812 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 17:08:41,455 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 17:08:41,460 p=134979 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 17:08:41,787 p=134979 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:08:41,791 p=134979 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 17:08:42,327 p=134979 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:08:42,332 p=134979 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 17:08:42,336 p=134979 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:08:42,916 p=134979 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:08:42,920 p=134979 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 17:08:43,232 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 17:08:43,237 p=134979 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 17:08:43,573 p=134979 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 17:08:43,579 p=134979 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 17:08:43,585 p=134979 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:08:44,170 p=134979 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:08:44,173 p=134979 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 17:08:44,349 p=134979 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:08:44,353 p=134979 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 17:08:44,833 p=134979 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 17:08:44,838 p=134979 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 17:08:45,946 p=134979 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 17:08:45,946 p=134979 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:08:45,946 p=134979 u=lbellov n=ansible INFO| backend                    : ok=11   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 17:13:12,644 p=136666 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:13:12,644 p=136666 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:13:12,803 p=136666 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:13:12,810 p=136666 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:13:15,258 p=136666 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"msg": "Incorrect sudo password"}
+2025-02-22 17:13:15,259 p=136666 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:13:15,259 p=136666 u=lbellov n=ansible INFO| backend                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-02-22 17:13:23,229 p=136845 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:13:23,229 p=136845 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:13:23,390 p=136845 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:13:23,397 p=136845 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:13:24,213 p=136845 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 17:13:24,213 p=136845 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:13:24,216 p=136845 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 17:13:26,232 p=136845 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:13:26,236 p=136845 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 17:13:26,834 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 17:13:27,425 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 17:13:28,005 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 17:13:28,593 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 17:13:29,178 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 17:13:29,780 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 17:13:30,383 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 17:13:30,972 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 17:13:30,977 p=136845 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 17:13:31,312 p=136845 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:13:31,316 p=136845 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 17:13:31,846 p=136845 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:13:31,850 p=136845 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 17:13:31,855 p=136845 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:13:32,432 p=136845 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:13:32,435 p=136845 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 17:13:32,749 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 17:13:32,755 p=136845 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 17:13:33,088 p=136845 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 17:13:33,094 p=136845 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 17:13:33,098 p=136845 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:13:33,677 p=136845 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:13:33,680 p=136845 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 17:13:33,866 p=136845 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:13:33,870 p=136845 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 17:13:33,881 p=136845 u=lbellov n=ansible INFO| skipping: [backend]
+2025-02-22 17:13:33,885 p=136845 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 17:13:34,666 p=136845 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 17:13:34,667 p=136845 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:13:34,667 p=136845 u=lbellov n=ansible INFO| backend                    : ok=10   changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-02-22 17:14:50,552 p=137525 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:14:50,552 p=137525 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:14:50,711 p=137525 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:14:50,717 p=137525 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:14:51,739 p=137525 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 17:14:51,739 p=137525 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:14:51,743 p=137525 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 17:14:54,490 p=137525 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:14:54,494 p=137525 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 17:14:55,094 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 17:14:55,678 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 17:14:56,275 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 17:14:56,859 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 17:14:57,438 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 17:14:58,020 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 17:14:58,607 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 17:14:59,186 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 17:14:59,191 p=137525 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 17:14:59,547 p=137525 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:14:59,551 p=137525 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 17:15:00,088 p=137525 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:15:00,092 p=137525 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 17:15:00,097 p=137525 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:15:00,677 p=137525 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:15:00,680 p=137525 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 17:15:00,994 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 17:15:01,000 p=137525 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 17:15:01,343 p=137525 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 17:15:01,348 p=137525 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 17:15:01,353 p=137525 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:15:01,939 p=137525 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:15:01,942 p=137525 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 17:15:02,127 p=137525 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:15:02,131 p=137525 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 17:15:02,140 p=137525 u=lbellov n=ansible INFO| skipping: [backend]
+2025-02-22 17:15:02,144 p=137525 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 17:15:02,950 p=137525 u=lbellov n=ansible INFO| fatal: [backend]: FAILED! => {"changed": false, "cmd": "/usr/bin/git ls-remote git@github.com:louieb117/API-Server.git -h refs/heads/main", "msg": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.", "rc": 128, "stderr": "Host key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n", "stderr_lines": ["Host key verification failed.", "fatal: Could not read from remote repository.", "", "Please make sure you have the correct access rights", "and the repository exists."], "stdout": "", "stdout_lines": []}
+2025-02-22 17:15:02,951 p=137525 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:15:02,951 p=137525 u=lbellov n=ansible INFO| backend                    : ok=10   changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-02-22 17:16:16,969 p=138203 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-22 17:16:16,969 p=138203 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-22 17:16:17,128 p=138203 u=lbellov n=ansible INFO| PLAY [Apply common configuration] ************************************************************************************************************************************************************************
+2025-02-22 17:16:17,134 p=138203 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:16:18,167 p=138203 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of another Python interpreter could change the meaning of that path.
+See https://docs.ansible.com/ansible-core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-22 17:16:18,167 p=138203 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:16:18,171 p=138203 u=lbellov n=ansible INFO| TASK [common : Update system packages] *******************************************************************************************************************************************************************
+2025-02-22 17:16:19,851 p=138203 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:16:19,855 p=138203 u=lbellov n=ansible INFO| TASK [common : Ensure common packages are installed] *****************************************************************************************************************************************************
+2025-02-22 17:16:20,459 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=vim)
+2025-02-22 17:16:21,042 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=curl)
+2025-02-22 17:16:21,637 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=git)
+2025-02-22 17:16:22,236 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=podman)
+2025-02-22 17:16:22,826 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=podman-compose)
+2025-02-22 17:16:23,413 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=htop)
+2025-02-22 17:16:24,017 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=glances)
+2025-02-22 17:16:24,618 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item=net-tools)
+2025-02-22 17:16:24,623 p=138203 u=lbellov n=ansible INFO| TASK [common : Ensure timezone is set] *******************************************************************************************************************************************************************
+2025-02-22 17:16:24,965 p=138203 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:16:24,970 p=138203 u=lbellov n=ansible INFO| TASK [common : Ensure log rotation is configured] ********************************************************************************************************************************************************
+2025-02-22 17:16:25,506 p=138203 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:16:25,511 p=138203 u=lbellov n=ansible INFO| PLAY [Manage users] **************************************************************************************************************************************************************************************
+2025-02-22 17:16:25,516 p=138203 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:16:26,091 p=138203 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:16:26,095 p=138203 u=lbellov n=ansible INFO| TASK [user_management : Create users] ********************************************************************************************************************************************************************
+2025-02-22 17:16:26,412 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'groups': 'sudo', 'shell': '/bin/bash'})
+2025-02-22 17:16:26,417 p=138203 u=lbellov n=ansible INFO| TASK [user_management : Set authorized keys for users] ***************************************************************************************************************************************************
+2025-02-22 17:16:26,749 p=138203 u=lbellov n=ansible INFO| ok: [backend] => (item={'name': 'devuser', 'key': '~/.ssh/id_rsa_devuser.pub'})
+2025-02-22 17:16:26,756 p=138203 u=lbellov n=ansible INFO| PLAY [Deploy application] ********************************************************************************************************************************************************************************
+2025-02-22 17:16:26,761 p=138203 u=lbellov n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-02-22 17:16:27,341 p=138203 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:16:27,344 p=138203 u=lbellov n=ansible INFO| TASK [application : Check if deployment SSH key already exists] ******************************************************************************************************************************************
+2025-02-22 17:16:27,532 p=138203 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-22 17:16:27,536 p=138203 u=lbellov n=ansible INFO| TASK [application : Generate deployment SSH key pair if it does not exist] *******************************************************************************************************************************
+2025-02-22 17:16:27,546 p=138203 u=lbellov n=ansible INFO| skipping: [backend]
+2025-02-22 17:16:27,550 p=138203 u=lbellov n=ansible INFO| TASK [application : Clone backend repo] ******************************************************************************************************************************************************************
+2025-02-22 17:16:33,511 p=138203 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 17:16:33,515 p=138203 u=lbellov n=ansible INFO| TASK [application : Deploy backend with Podman Compose] **************************************************************************************************************************************************
+2025-02-22 17:17:31,441 p=138203 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-22 17:17:31,446 p=138203 u=lbellov n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-02-22 17:17:31,446 p=138203 u=lbellov n=ansible INFO| backend                    : ok=12   changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-02-25 22:29:54,613 p=50495 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-25 22:29:54,614 p=50495 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-25 22:29:54,782 p=50495 u=lbellov n=ansible INFO| PLAY [Refetch the main branch of the backend project] ***************************************************************************************
+2025-02-25 22:29:54,788 p=50495 u=lbellov n=ansible INFO| TASK [Gathering Facts] **********************************************************************************************************************
+2025-02-25 22:29:55,864 p=50495 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-25 22:29:55,864 p=50495 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:29:55,868 p=50495 u=lbellov n=ansible INFO| TASK [Check if deployment SSH key already exists] *******************************************************************************************
+2025-02-25 22:29:56,144 p=50495 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:29:56,148 p=50495 u=lbellov n=ansible INFO| TASK [Ensure the backend repo is cloned and up-to-date] *************************************************************************************
+2025-02-25 22:30:00,205 p=50495 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:30:00,209 p=50495 u=lbellov n=ansible INFO| TASK [Deploy backend with Podman Compose] ***************************************************************************************************
+2025-02-25 22:30:04,815 p=50495 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-25 22:30:04,815 p=50495 u=lbellov n=ansible INFO| PLAY RECAP **********************************************************************************************************************************
+2025-02-25 22:30:04,816 p=50495 u=lbellov n=ansible INFO| backend                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-02-25 22:34:00,355 p=54120 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-25 22:34:00,356 p=54120 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-25 22:34:00,538 p=54120 u=lbellov n=ansible INFO| PLAY [Refetch the main branch of the backend project] ***************************************************************************************
+2025-02-25 22:34:00,544 p=54120 u=lbellov n=ansible INFO| TASK [Gathering Facts] **********************************************************************************************************************
+2025-02-25 22:34:01,558 p=54120 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-25 22:34:01,558 p=54120 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:34:01,562 p=54120 u=lbellov n=ansible INFO| TASK [Check if deployment SSH key already exists] *******************************************************************************************
+2025-02-25 22:34:01,837 p=54120 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:34:01,841 p=54120 u=lbellov n=ansible INFO| TASK [Ensure the backend repo is cloned and up-to-date] *************************************************************************************
+2025-02-25 22:34:06,791 p=54120 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-25 22:34:06,795 p=54120 u=lbellov n=ansible INFO| TASK [Deploy backend with Podman Compose] ***************************************************************************************************
+2025-02-25 22:34:11,395 p=54120 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-25 22:34:11,396 p=54120 u=lbellov n=ansible INFO| PLAY RECAP **********************************************************************************************************************************
+2025-02-25 22:34:11,396 p=54120 u=lbellov n=ansible INFO| backend                    : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-02-25 22:36:44,235 p=56086 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-25 22:36:44,236 p=56086 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-25 22:36:44,381 p=56086 u=lbellov n=ansible INFO| PLAY [Refetch the main branch of the backend project] ***************************************************************************************
+2025-02-25 22:36:44,386 p=56086 u=lbellov n=ansible INFO| TASK [Gathering Facts] **********************************************************************************************************************
+2025-02-25 22:36:45,387 p=56086 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-25 22:36:45,387 p=56086 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:36:45,391 p=56086 u=lbellov n=ansible INFO| TASK [Check if deployment SSH key already exists] *******************************************************************************************
+2025-02-25 22:36:45,647 p=56086 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:36:45,651 p=56086 u=lbellov n=ansible INFO| TASK [Ensure the backend repo is cloned and up-to-date] *************************************************************************************
+2025-02-25 22:36:48,782 p=56086 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:36:48,786 p=56086 u=lbellov n=ansible INFO| TASK [Deploy backend with Podman Compose] ***************************************************************************************************
+2025-02-25 22:36:53,374 p=56086 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-25 22:36:53,374 p=56086 u=lbellov n=ansible INFO| PLAY RECAP **********************************************************************************************************************************
+2025-02-25 22:36:53,375 p=56086 u=lbellov n=ansible INFO| backend                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-02-25 22:44:50,513 p=61376 u=lbellov n=ansible INFO| Encryption successful
+2025-02-25 22:55:23,793 p=68274 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: backend
+
+2025-02-25 22:55:23,793 p=68274 u=lbellov n=ansible WARNING| [WARNING]: Found both group and host with same name: frontend
+
+2025-02-25 22:55:23,939 p=68274 u=lbellov n=ansible INFO| PLAY [Refetch the main branch of the backend project] ***************************************************************************************
+2025-02-25 22:55:23,943 p=68274 u=lbellov n=ansible INFO| TASK [Gathering Facts] **********************************************************************************************************************
+2025-02-25 22:55:24,949 p=68274 u=lbellov n=ansible WARNING| [WARNING]: Platform linux on host backend is using the discovered Python interpreter at /usr/bin/python3.11, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-02-25 22:55:24,949 p=68274 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:55:24,952 p=68274 u=lbellov n=ansible INFO| TASK [Check if deployment SSH key already exists] *******************************************************************************************
+2025-02-25 22:55:25,212 p=68274 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:55:25,217 p=68274 u=lbellov n=ansible INFO| TASK [Ensure the backend repo is cloned and up-to-date] *************************************************************************************
+2025-02-25 22:55:28,569 p=68274 u=lbellov n=ansible INFO| ok: [backend]
+2025-02-25 22:55:28,573 p=68274 u=lbellov n=ansible INFO| TASK [Deploy backend with Podman Compose] ***************************************************************************************************
+2025-02-25 22:55:33,169 p=68274 u=lbellov n=ansible INFO| changed: [backend]
+2025-02-25 22:55:33,170 p=68274 u=lbellov n=ansible INFO| PLAY RECAP **********************************************************************************************************************************
+2025-02-25 22:55:33,170 p=68274 u=lbellov n=ansible INFO| backend                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

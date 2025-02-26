@@ -1,2 +1,0 @@
-to run:
-ansible-playbook -i inventory.ini backend.yaml frontend.yaml
